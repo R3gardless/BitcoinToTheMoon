@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.CoinListFragment">
+
+    <TextView
+        android:id="@+id/tvNickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="님 안녕하세요"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNickname"
+        app:layout_constraintStart_toEndOf="@+id/tvNickname" />
+
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="즐겨찾기 하신 코인 리스트"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/tvNickname"
+        app:layout_constraintTop_toBottomOf="@+id/tvNickname" />
+
+    <ScrollView
+        android:id="@+id/svList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvInfo"
+        app:layout_constraintTop_toBottomOf="@+id/tvInfo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/ConstraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivBinance"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/binance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBinance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivBinance"
+                app:layout_constraintTop_toBottomOf="@+id/ivBinance" />
+
+
+            <ImageView
+                android:id="@+id/ivUpbit"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/upbit"
+                app:layout_constraintStart_toStartOf="@+id/rvBinance"
+                app:layout_constraintTop_toBottomOf="@+id/rvBinance" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvUpbit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivUpbit"
+                app:layout_constraintTop_toBottomOf="@+id/ivUpbit" />
+
+            <ImageView
+                android:id="@+id/ivBithumb"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/bithumb"
+                app:layout_constraintStart_toStartOf="@+id/rvUpbit"
+                app:layout_constraintTop_toBottomOf="@+id/rvUpbit" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBithumb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/ivBithumb"
+                app:layout_constraintTop_toBottomOf="@+id/ivBithumb" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

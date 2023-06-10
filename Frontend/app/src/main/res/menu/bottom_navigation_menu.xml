@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+            android:id="@+id/coinListFragment"
+            android:title="CoinList"
+            android:icon="@drawable/star_fill"/>
+        <item
+            android:id="@+id/binanceFragment"
+            android:title="Binance"
+            android:icon="@drawable/binance_logo" />
+
+        <item
+            android:id="@+id/upbitFragment"
+            android:title="Upbit"
+            android:icon="@drawable/upbit_logo" />
+
+        <item
+            android:id="@+id/bithumbFragment"
+            android:title="Bithumb"
+            android:icon="@drawable/bithumb_logo" />
+        <item
+            android:id="@+id/newsFragment"
+            android:title="News"
+            android:icon="@drawable/news"/>
+</menu>

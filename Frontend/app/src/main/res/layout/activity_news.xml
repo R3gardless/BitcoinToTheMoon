@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+
+    <ImageView
+        android:id="@+id/ivNews"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/news"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="가상화폐 관련 간략 뉴스"
+        android:textStyle="bold"
+        android:textColor="@color/theme"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNews"
+        app:layout_constraintStart_toEndOf="@+id/ivNews"
+        app:layout_constraintTop_toTopOf="@+id/ivNews" />
+
+    <TextView
+        android:id="@+id/tvNewsTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:text="제목제목제목"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ivNews"
+        app:layout_constraintTop_toBottomOf="@+id/ivNews" />
+
+
+    <TextView
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="작성자 |"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/tvNewsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewsTitle" />
+
+    <TextView
+        android:id="@+id/tvSourceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="출처"
+        android:textColor="@color/purple_700"
+        android:layout_marginStart="5dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAuthor"
+        app:layout_constraintStart_toEndOf="@+id/tvAuthor"
+        app:layout_constraintTop_toTopOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvPublishedAt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="13sp"
+        android:text="작성 날짜"
+        app:layout_constraintStart_toStartOf="@+id/tvAuthor"
+        app:layout_constraintTop_toBottomOf="@+id/tvAuthor" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
+        android:textStyle="italic"
+        android:textSize="15sp"
+        android:text="Description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvPublishedAt"
+        app:layout_constraintTop_toBottomOf="@+id/tvPublishedAt" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:text="Content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvDescription"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+    <Button
+        android:id="@+id/btnURL"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="더 보기 - 원본링크"
+        android:textStyle="bold"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvContent"
+        app:layout_constraintStart_toStartOf="@+id/tvContent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

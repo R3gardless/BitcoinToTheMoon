@@ -1,0 +1,30 @@
+package edu.skku.cs.bitcointothemoon.DataModel
+
+data class Upbit (
+    val market : String,
+    val trade_date: String,
+    val trade_time: String,
+    val trade_date_kst: String,
+    val trade_time_kst: String,
+    val trade_timestamp: Int,
+    val opening_price: Float,
+    val high_price: Float,
+    val low_price: Float,
+    val trade_price: Float,
+    val prev_closing_price: Float,
+    val change:String,
+    val change_price: Float,
+    val change_rate: Float,
+    val signed_change_price: Float,
+    val signed_change_rate: Float,
+    val trade_volume: Float,
+    val acc_trade_price: Float,
+    val acc_trade_price_24h: Float,
+    val acc_trade_volume: Float,
+    val acc_trade_volume_24h: Float,
+    val highest_52_week_price: Float,
+    val highest_52_week_date: String,
+    val lowest_52_week_price: Float,
+    val lowest_52_week_date: String,
+    val timestamp: Int
+)
